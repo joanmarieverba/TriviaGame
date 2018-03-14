@@ -1,0 +1,46 @@
+body {
+    background-image: url("../images/trivia-game-background.png");
+    min-height: 100%;
+}
+
+.container {
+    padding-top: 75px;
+}
+
+h1 {
+    color: midnightblue;
+    font-family: 'Orbitron';
+    font-size: 48px;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+h2 {
+    color: #4aaaa5;
+    font-family: 'Orbitron';
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+    padding-top: 0;
+}
+
+.btnstart {
+    margin-top: 5vw;
+    margin-left: 30vw;
+    width: 190px;
+}
+
+.innerbox {
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+

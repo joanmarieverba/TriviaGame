@@ -18,9 +18,9 @@ h1 {
 }
 
 
-h2 {
-    color: #4aaaa5;
-    font-family: 'Orbitron';
+h2, h3 {
+    color: midnightblue;
+    font-family: 'Roboto';
     font-size: 22px;
     text-align: center;
     font-weight: bold;
@@ -38,13 +38,22 @@ h4 {
     width: 190px;
 }
 
+.btndone {
+    margin-top: 5vw;
+    width: 190px;
+}
+
 .innerbox {
   background-color: antiquewhite;
   padding: 10px;
 }
 
-#timer {
-    margin-left: 30vw;
+.questions {
+    text-align: center;
+}
+
+.timecount {
     margin-top: 20px;
+    text-align: center;
 }
 

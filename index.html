@@ -8,56 +8,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 
   </head>
 
 <body>
 
+<div class="container">
 
-  <div class="container">
-
-    <div class="row">
+  <div class="row">
  
-      <div class="col-md-1">
-      </div>
+    <div class="col-md-1">
+    </div>
 
-      <div class="col-md-10 col-xs-12 innerbox">
+    <div class="col-md-10 col-xs-12 innerbox">
 
-          <h1>Totally Trivial Trivia!</h1>
+      <h1>Totally Trivial Trivia!</h1>
 
-            <h4><p id="timer"></p></h4>
+      <h4><p id="timer" class="timecount"></p></h4>
 
-            <button class="btnstart">
-              <h4>Start</h4>
-            </button>
+      <button class="btnstart">
+        <h4>Start</h4>
+      </button>
+
+      <h2><p id="gameover"></p></h2>
+      <h3><p id="numcorrect"></p></h3>
+      <h3><p id="numincorrect"></p></h3>
+      <h3><p id="numblank"></p></h3>
+
+      <form class="questions">
+
+        <p><h2>What was the year of the first moon landing?</h2></p>
+        <div>
+          <input type="radio" class="q1" id="contactChoice1" name="contact" value="1968">
+          <label for="contactChoice1">1968</label>
+
+          <input type="radio" class="q1" id="contactChoice2" name="contact" value="1969">
+          <label for="contactChoice2">1969</label>
+
+          <input type="radio" class="q1" id="contactChoice3" name="contact" value="1970">
+          <label for="contactChoice3">1970</label>
+
+          <input type="radio" class="q1" id="contactChoice4" name="contact" value="1971">
+          <label for="contactChoice4">1971</label>
+        </div>
+
+        <p><h2>What is the largest planet in the solar system?</h2></p>
+        <div>
+          <input type="radio" class="q2" id="contactChoice1" name="contact" value="Saturn">
+          <label for="contactChoice1">Saturn</label>
+        
+          <input type="radio" class="q2" id="contactChoice2" name="contact" value="Neptune">
+          <label for="contactChoice2">Neptune</label>
+        
+          <input type="radio" class="q2" id="contactChoice3" name="contact" value="Uranus">
+          <label for="contactChoice3">Uranus</label>
+        
+          <input type="radio" class="q2" id="contactChoice4" name="contact" value="Jupiter">
+          <label for=" contactChoice4 ">Jupiter</label>
+        </div>
+        
 
 
+        <div>
+          <button type="submit" class="btndone"><h4>Done</h4></button>
+        </div>
+      </form>
 
-            <p id="numguess"></p>
 
-            <p id="already"></p>
-
-            <p id="gameover"></p>
-
-            <p id="numwins"></p>
-
- 
-
-      </div>
 
     </div>
-</div>
 
-  <div class="row">
-        &nbsp
   </div>
+</div>  
 
-  <div class="row">
-    &nbsp
-  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="./assets/javascript/game.js"></script>
+  <script src="./assets/javascript/app.js"></script>
 </body>
 </html>

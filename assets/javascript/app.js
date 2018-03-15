@@ -12,7 +12,7 @@ $(".btndone").hide();
 function endGame() {
     $(".timecount").empty();
     $(".questions").empty();
-    $(".btndone").empty();
+    $(".btndone").hide();
     $("#gameover").text(`All Done!`);
     $("#numcorrect").text(`Correct Answers: ${correctAnswers}`);
     $("#numincorrect").text(`Incorrect Answers ${incorrectAnswers}`);
@@ -37,7 +37,7 @@ $(".btnstart").click(function () {
         }
     }
 
-    $(".btnstart").empty();
+    $(".btnstart").hide();
     $(".timecount").show();
     $(".questions").show();
     $(".btndone").show();
@@ -65,5 +65,5 @@ $(".q2").click(function () {
 
 $(".btndone").click(function () {
     endGame();
-    $(".timecount").empty();
+    $(".timecount").hide();
 });

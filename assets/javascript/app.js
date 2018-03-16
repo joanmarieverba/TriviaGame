@@ -2,8 +2,10 @@
 
 let correctAnswers = 0;
 let incorrectAnswers = 0;
-let unanswered = 2;
-let clicked = 0;
+let unanswered = 0;
+let clicked = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let correct = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let incorrect = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 $(".timecount").hide();
 $(".questions").hide();
@@ -14,9 +16,11 @@ function endGame() {
     $(".questions").empty();
     $(".btndone").hide();
     $("#gameover").text(`All Done!`);
+    correctAnswers = correct.reduce(function (a, b) { return a + b; }, 0);
     $("#numcorrect").text(`Correct Answers: ${correctAnswers}`);
+    incorrectAnswers = incorrect.reduce(function (a, b) { return a + b; }, 0);
     $("#numincorrect").text(`Incorrect Answers ${incorrectAnswers}`);
-    unanswered = unanswered - clicked;
+    unanswered = 12 - clicked.reduce(function (a, b) { return a + b; }, 0);
     $("#numblank").text(`Unanswered: ${unanswered}`);
 }
 
@@ -47,20 +51,24 @@ $(".btnstart").click(function () {
 $(".q1").click(function () {
     console.log($(this).val());
     if ($(this).val() === "1969") {
-        correctAnswers++;   
+        correct[1] = 1; 
+        incorrect[1] = 0;
     } else {
-        incorrectAnswers++;
+        incorrect[1] = 1;
+        correct [1] = 0;
     }
-    clicked++;
+    clicked[1] = 1;
 });
 
 $(".q2").click(function () {
     if ($(this).val() === "Jupiter") {
-        correctAnswers++;
+        correct[2] = 1;
+        incorrect[2] = 0;
     } else {
-        incorrectAnswers++;
+        incorrect[2] = 1;
+        correct[2] = 0;
     }
-    clicked++;
+    clicked[2] = 1;
 });
 
 $(".btndone").click(function () {

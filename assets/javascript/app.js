@@ -3,9 +3,9 @@
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 let unanswered = 0;
-let clicked = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let correct = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let incorrect = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let clicked = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let correct = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let incorrect = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 $(".timecount").hide();
 $(".questions").hide();
@@ -20,7 +20,7 @@ function endGame() {
     $("#numcorrect").text(`Correct Answers: ${correctAnswers}`);
     incorrectAnswers = incorrect.reduce(function (a, b) { return a + b; }, 0);
     $("#numincorrect").text(`Incorrect Answers ${incorrectAnswers}`);
-    unanswered = 12 - clicked.reduce(function (a, b) { return a + b; }, 0);
+    unanswered = 8 - clicked.reduce(function (a, b) { return a + b; }, 0);
     $("#numblank").text(`Unanswered: ${unanswered}`);
 }
 
@@ -69,6 +69,72 @@ $(".q2").click(function () {
         correct[2] = 0;
     }
     clicked[2] = 1;
+});
+
+$(".q3").click(function () {
+    if ($(this).val() === "Io") {
+        correct[3] = 1;
+        incorrect[3] = 0;
+    } else {
+        incorrect[3] = 1;
+        correct[3] = 0;
+    }
+    clicked[3] = 1;
+});
+
+$(".q4").click(function () {
+    if ($(this).val() === "Uranus") {
+        correct[4] = 1;
+        incorrect[4] = 0;
+    } else {
+        incorrect[4] = 1;
+        correct[4] = 0;
+    }
+    clicked[4] = 1;
+});
+
+$(".q5").click(function () {
+    if ($(this).val() === "hydrogen") {
+        correct[5] = 1;
+        incorrect[5] = 0;
+    } else {
+        incorrect[5] = 1;
+        correct[5] = 0;
+    }
+    clicked[5] = 1;
+});
+
+$(".q6").click(function () {
+    if ($(this).val() === "Earth") {
+        correct[6] = 1;
+        incorrect[6] = 0;
+    } else {
+        incorrect[6] = 1;
+        correct[6] = 0;
+    }
+    clicked[6] = 1;
+});
+
+$(".q7").click(function () {
+    if ($(this).val() === "Sun") {
+        correct[7] = 1;
+        incorrect[7] = 0;
+    } else {
+        incorrect[7] = 1;
+        correct[7] = 0;
+    }
+    clicked[7] = 1;
+});
+
+$(".q8").click(function () {
+    if ($(this).val() === "Jupiter") {
+        correct[8] = 1;
+        incorrect[8] = 0;
+    } else {
+        incorrect[8] = 1;
+        correct[8] = 0;
+    }
+    clicked[8] = 1;
 });
 
 $(".btndone").click(function () {

@@ -27,8 +27,10 @@ h2, h3 {
 }
 
 h4 {
-    font-family: 'Georgia', serif;
-    font-weight: normal;
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
     padding-top: 0;
 }
 
